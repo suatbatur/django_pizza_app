@@ -1,10 +1,9 @@
-
 from django.urls import path
-from .views import home,order,order_list
+from .views import home,order,pizzas,edit_order
+
 urlpatterns = [
-    path('', home, name='home'),
-    path('order/', order, name='order'),
-    path('list/', order_list, name='list'),
- 
-    
+    path('', home, name='home'),  # This is for home page
+    path('order/', order, name='order'),  # This is for ordering page
+    path('pizzas', pizzas, name='pizzas'),
+    path('order/<int:pk>', edit_order, name='edit_order'),
 ]
