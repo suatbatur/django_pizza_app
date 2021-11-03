@@ -1,9 +1,10 @@
-{% extends 'base.html' %}
+{% extends 'pizza/base.html' %}
+{% block 'body' %}
 
+{% load static %}
 
-{% block content %}
+<div class="text-center">
+    <img src="{% static 'nandiasgarden.jpg' %}" class="img-fluid" alt="Nandia's Garden">
+</div>
 
-<h2>welcome to PizzaApp</h2>
-    
-{% endblock content %}
-    
+{% endblock %}
